@@ -1,0 +1,32 @@
+######################################################################
+# Syntax Coloring Map for SparkFun TMP117 Temperature Sensor Library #
+######################################################################
+# Class
+######################################################################
+
+SFE_PARTICLE_SENSOR	KEYWORD1
+
+######################################################################
+# Methods and Functions
+######################################################################
+
+begin	KEYWORD2
+getPM	KEYWORD2
+getPM1_0	KEYWORD2
+getPM2_5	KEYWORD2
+getPM10	KEYWORD2
+getPC0_5	KEYWORD2
+getPC1_0	KEYWORD2
+getPC2_5	KEYWORD2
+getPC5_0	KEYWORD2
+getPC7_5	KEYWORD2
+getPC10	KEYWORD2
+getState	KEYWORD2
+getStatusSensor	KEYWORD2
+getStatusPD	KEYWORD2
+getStatusLD	KEYWORD2
+getStatusFan	KEYWORD2
+isConnected	KEYWORD2
+readRegister8	KEYWORD2
+readRegister16	KEYWORD2
+readRegister32	KEYWORD2
