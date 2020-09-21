@@ -5,8 +5,7 @@
   Date: September 8th, 2020
   License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
 
-  This example shows how to output the "mass densities" of PM1, PM2.5, and PM10 readings as well as the 
-  "particle counts" for particles 0.5 to 10 microns in size.
+  This example shows how to use a different Wire port and faster I2C clock.
 
   What is PM and why does it matter?
   https://www.epa.gov/pm-pollution/particulate-matter-pm-basics
@@ -33,9 +32,10 @@ void setup()
   Serial.begin(115200);
   Serial.println(F("Panasonic SN-GCJA5 Example"));
 
-  Wire.begin();
+  Wire1.begin();          //This line will fail on an Uno. Use a platform that has multiple Wire ports.
+  Wire1.setClock(400000); //The SN-GCJA5 support 400kHz I2C
 
-  if (myAirSensor.begin() == false)
+  if (myAirSensor.begin(Wire1) == false) //Pass the Wire1 port into the library
   {
     Serial.println("The particle sensor did not respond. Please check wiring. Freezing...");
     while (1)
